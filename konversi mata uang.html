@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONVERSI MATA UANG</title>
+<style>
+    .container {
+        background-color: black;
+        color: white;
+        text-align: center;
+        margin-top: 10%;
+        border: solid;
+    }
+</style>
+    
+</head>
+<body class="container">
+        <h1>KONVERSI MATA UANG</h1>
+        <hr>
+        <p>
+            <label>MASUKAN JUMLAH UANG</label>
+            <br>
+            <input type="number" class="masuk"/>
+        </p>
+        <p>
+            <label>MATA UANG </label>
+            <br>
+            <select class="pilihan">
+                <option value="dollar">Dollar US</option>
+                <option value="doll singa">Dollar Singapura</option>
+                <option value="rm">Ringgit Malaysia</option>
+                <option value="yen jepang">Yen Jepang</option>
+                <option value="euro">Euro</option>
+                <option value="riyal arab">Riyal Arab Saudi</option>
+            </select>
+        </p>
+        <h2 class="hasil"></h2>
+        <button class="convert">Convert</button>
+    
+<script>
+
+   const input = document.querySelector('.masuk');
+   const pilihan = document.querySelector('.pilihan');
+   const convert = document.querySelector('.convert');
+   const hasil = document.querySelector('.hasil');
+
+   convert.addEventListener("click", function
+   (){
+       if (pilihan.value == "dollar") {
+           var bilangan = input.value * 9915
+           hasil.innerHTML = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(bilangan);
+       }
+       else if (pilihan.value == "doll singa") {
+           var bilangan = input.value * 13472
+           hasil.innerHTML = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(bilangan);
+       }
+       else if (pilihan.value == "rm") {
+           var bilangan = input.value * 874
+           hasil.innerHTML = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(bilangan);
+       }
+       else if (pilihan.value == "yen jepang") {
+           var bilangan = input.value * 120
+           hasil.innerHTML = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(bilangan);
+       }
+       else if (pilihan.value == "euro") {
+           var bilangan = input.value * 15888
+           hasil.innerHTML = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(bilangan);
+       }
+       else if (pilihan.value == "riyal arab") {
+           var bilangan = input.value * 3592
+           hasil.innerHTML = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(bilangan)
+       }
+   })
+</script>
+</body>
+</html>
